@@ -34,7 +34,3 @@ con un enfoque en la simplicidad y la funcionalidad, proporcionando una experien
     - **Sistema**: Git
     - **Repositorio**: Github
 
-## Instalación
-
-## Backend
-1. Clona el repositorio: 'git
