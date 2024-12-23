@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 
-import routes
+import routes  # Asegúrate de que este archivo exista
 
 if __name__ == '__main__':
     app.run(debug=True)
