@@ -33,4 +33,3 @@ con un enfoque en la simplicidad y la funcionalidad, proporcionando una experien
 - **Control de versiónes**:
     - **Sistema**: Git
     - **Repositorio**: Github
-
