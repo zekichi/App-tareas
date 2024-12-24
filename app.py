@@ -3,6 +3,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_bcrypt import Bcripyt
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -17,3 +18,5 @@ import routes  # Asegúrate de que este archivo exista
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+bcrypt = Bcripyt(app)
