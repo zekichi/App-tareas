@@ -10,9 +10,9 @@ const App = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="/login" component={LoginForm} />
-          <Route path="/register" component={RegisterForm} />
-          <Route path="/" component={TaskList} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/" element={< TaskList />} />
         </Routes>
       </div>
     </Router>

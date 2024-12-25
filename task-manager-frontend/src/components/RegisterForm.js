@@ -23,6 +23,7 @@ const RegisterForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h2>Register</h2>
             <div>
                 <label>Username</label>
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
