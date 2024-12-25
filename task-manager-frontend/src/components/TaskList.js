@@ -1,7 +1,11 @@
 import React from "react";
 import Task from './Task';
 
-const TaskList = ({ tasks }) => {
+const TaskList = () => {
+    const tasks = [
+        { id: 1, title: "Example Taks 1", content: "This is an example task." },
+        { id: 2, title: "Example Task 2", content: "This is another example task." }
+    ];
     return (
         <div>
             {tasks.map(task => (
