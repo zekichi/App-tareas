@@ -24,23 +24,23 @@ const RegisterForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Register</h2>
-            <div>
+            <div className="form-group">
                 <label>Username</label>
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
             </div>
-            <div>
+            <div className="form-group">
                 <label>Email</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div>
+            <div className="form-group">
                 <label>Password</label>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <div>
+            <div className="form-group">
                 <label>Confirm Password</label>
-                <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                <input type="password" className="form-control" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" className="btn btn-primary">Register</button>
         </form>
     );
 };

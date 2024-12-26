@@ -17,15 +17,15 @@ const LoginForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Login</h2>
-            <div>
+            <div className="form-group">
                 <label>Email</label>
-                <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input type='email' className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div>
                 <label>Password</label>
-                <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type='password' className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <button type='submit'>Login</button>
+            <button type='submit' className="btn btn-primary">Login</button>
         </form>
     );
 };
