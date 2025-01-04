@@ -12,3 +12,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+/* Media Queries para dispositivos más grandes */
+@media (min-width: 600px){
+  body{
+    font-size: 1.2em;
+  }
+
+  code{
+    font-size: 1em;
+  }
+}
