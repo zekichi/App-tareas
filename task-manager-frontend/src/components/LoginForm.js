@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ const LoginForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try{
-            const response = await axios.post('/login', {email, password});
+            const response = await axios.post(`${API_BASE_URL}/tasks`, {email, password});
             console.log('Logins succesful', response.data);
         } catch (error) {
             console.error('There was an error logging in!', error);

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Task from './Task';
 import axios from 'axios';
+import { API_BASE_URL } from "../config";
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
@@ -8,7 +9,7 @@ const TaskList = () => {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await axios.get('/api/tasks');
+                const response = await axios.get(`${API_BASE_URL}/tasks`);
                 setTasks(response.data);
             } catch (error){
                 console.error('Error fetching tasks', error);
@@ -23,7 +24,7 @@ const TaskList = () => {
 
     const handleDelete = async (taskId) => {
         try{
-            await axios.delete('/api/tasks/${taskId}');
+            await axios.delete(`${API_BASE_URL}/tasks/${taskId}`);
             setTasks(tasks.filter(task = task.id !== taskId));
         } catch (error){
             console.error('Error deleting task', error);

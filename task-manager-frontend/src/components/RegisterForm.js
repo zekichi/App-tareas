@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios';
+import { API_BASE_URL } from "../config";
 
 const RegisterForm = () => {
     const [username, setUsername] = useState('');
@@ -14,7 +15,7 @@ const RegisterForm = () => {
             return;
         }
         try {
-            const response = await axios.post('/register', {username, email, password});
+            const response = await axios.post(`${API_BASE_URL}/tasks`, {username, email, password});
             console.log('Registration successful', response.data);
         } catch (error) {
             console.error('There was an error registering!', error);
