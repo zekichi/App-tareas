@@ -73,6 +73,7 @@ def create_task():
 @app.route('/api/tasks/<int:task_id>', methods=['PUT'])
 @login_required
 def update_task(task_id):
+    data = request.get_json()
     task = Task.query.filter_by(id=task_id, user_id = current_user.id).first()
     if task is None:
         return jsonify({'message': 'Task not found!'}), 404
