@@ -7,6 +7,7 @@ const RegisterForm = () => {
     const [email, setEmail] = useState('');  
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -15,16 +16,18 @@ const RegisterForm = () => {
             return;
         }
         try {
-            const response = await axios.post(`${API_BASE_URL}/tasks`, {username, email, password});
+            const response = await axios.post(`${API_BASE_URL}/register`, {username, email, password});
             console.log('Registration successful', response.data);
         } catch (error) {
-            console.error('There was an error registering!', error);
+            setError('There was an error registering your account');
+            console.error(error);
         }
     };
 
     return (
         <form onSubmit={handleSubmit}>
             <h2>Register</h2>
+            {error && <p className="alert alert-danger">{error}</p>}
             <div className="form-group">
                 <label>Username</label>
                 <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
